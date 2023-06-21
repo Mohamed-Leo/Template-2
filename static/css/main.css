@@ -1,0 +1,1052 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* start variables */
+/* End variables */
+.main-heading {
+  width: 40%;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+.main-heading p {
+  text-align: center;
+  line-height: 2;
+  color: #777;
+}
+
+.main-heading h2 {
+  font-size: 40px;
+  font-weight: normal;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 25%;
+}
+
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: white;
+}
+
+.bullets {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  display: flex;
+  list-style: none;
+}
+.bullets li {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: 1px solid #fff;
+}
+.bullets li:nth-child(2) {
+  background-color: #00C7FC;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+.container header {
+  background: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  position: relative;
+  z-index: 2;
+  height: 110px;
+  width: 90%;
+  margin: auto;
+}
+.container header nav .logo img {
+  height: 45px;
+}
+.container header nav .links {
+  height: 100%;
+}
+.container header nav .links ul {
+  display: flex;
+  height: 100%;
+}
+.container header nav .links ul li {
+  list-style: none;
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container header nav .links ul li:nth-child(8) {
+  padding-left: 5px;
+}
+.container header nav .links ul li:nth-child(8)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 50%;
+  left: -10px;
+  background-color: #fff;
+  opacity: 0.8;
+}
+.container header nav .links ul .list-icon {
+  margin: 0 30px;
+  display: none;
+}
+.container header nav .links ul li:nth-child(1) {
+  border-bottom: 1px solid #00C7FC;
+}
+.container header nav .links ul li:nth-child(1) a {
+  color: #00C7FC;
+}
+.container header nav .links ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+.container header nav .links ul li:hover a {
+  color: #00C7FC;
+}
+.container header nav .links ul li i {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.container header nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 0.5;
+}
+.container header .media-list {
+  position: absolute;
+  top: 18%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7607843137);
+  z-index: 4;
+  width: 100%;
+  display: none;
+}
+.container header .media-list ul li {
+  list-style: none;
+  padding: 20px 25px;
+}
+.container header .media-list ul li:nth-child(1) {
+  border-bottom: 1px solid #00C7FC;
+}
+.container header .media-list ul li:hover a {
+  color: #00C7FC;
+}
+.container header .media-list ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+.container header .header-text {
+  background-color: rgba(21, 99, 119, 0.7411764706);
+  color: #fff;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 40px 20px 40px 70px;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.container header .header-text h1 {
+  font-weight: 100;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+.container header .header-text p {
+  line-height: 3;
+}
+.container header i {
+  position: absolute;
+  font-size: 2rem;
+  color: #fff;
+}
+.container header .arrow-left {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.container header .arrow-right {
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}
+
+.container header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Media Quieries for Header-------------------*/
+@media (max-width: 1020px) {
+  .container header .header-text {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .container header nav .links ul li:nth-child(1),
+  .container header nav .links ul li:nth-child(2),
+  .container header nav .links ul li:nth-child(3),
+  .container header nav .links ul li:nth-child(4),
+  .container header nav .links ul li:nth-child(5),
+  .container header nav .links ul li:nth-child(6) {
+    display: none;
+  }
+  .container header nav .links ul li:nth-child(7) {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+  .container header .header-text {
+    width: 100%;
+    padding: 20px;
+  }
+  .container header .arrow-left,
+  .container header .arrow-right {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .container header nav {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    justify-content: space-around;
+  }
+  .container header .header-text {
+    width: 100%;
+    padding: 15px;
+  }
+  .container header .header-text h1 {
+    font-size: 20px;
+  }
+  .container header .bullets li {
+    width: 10px;
+    height: 10px;
+  }
+}
+.container main {
+  margin-top: 100px;
+}
+.container main .section-1 .services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 60px;
+  padding: 0 80px;
+}
+.container main .section-1 .services .box {
+  display: flex;
+  gap: 40px;
+}
+.container main .section-1 .services .box .text {
+  max-width: 100%;
+}
+.container main .section-1 .services .box .text h3 {
+  color: #00C7FC;
+  margin-bottom: 30px;
+}
+.container main .section-1 .services .box .text p {
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .container main .section-1 .services {
+    padding: 0 15px;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .container main .section-1 .services .box {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .container main .section-1 .services .box .text {
+    text-align: center;
+  }
+}
+.container main .section-2 {
+  position: relative;
+  margin-top: 100px;
+  background: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 15;
+  overflow: hidden;
+}
+.container main .section-2 .img {
+  flex: 1;
+  text-align: center;
+  align-self: flex-end;
+}
+.container main .section-2 .img img {
+  position: relative;
+  bottom: -120px;
+}
+.container main .section-2 .text {
+  background-color: rgba(21, 99, 119, 0.7411764706);
+  color: #fff;
+  padding: 50px;
+  flex: 1;
+}
+.container main .section-2 .text h2 {
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+.container main .section-2 .text ul {
+  padding: 0 15px;
+}
+.container main .section-2 .text ul li {
+  list-style: none;
+  padding: 20px 0;
+}
+.container main .section-2 .text ul li i {
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .container main .section-2 .img {
+    display: none;
+  }
+  .container main .section-2 .text {
+    padding: 50px 20px;
+  }
+}
+.container main .section-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.container main .section-3 {
+  margin-top: 100px;
+}
+.container main .section-3 .shuffle {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.container main .section-3 .shuffle li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 15px;
+}
+.container main .section-3 .shuffle :nth-child(1) {
+  background-color: #00C7FC;
+  color: #fff;
+}
+.container main .section-3 .img-container {
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+}
+.container main .section-3 .img-container .box {
+  flex-basis: 25%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.container main .section-3 .img-container .box img {
+  max-width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
+.container main .section-3 .img-container .box .caption {
+  background-color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: -50%;
+  width: 100%;
+  transition: bottom 0.5s;
+}
+.container main .section-3 .img-container .box .caption p {
+  color: #00C7FC;
+  padding-top: 10px;
+}
+.container main .section-3 .img-container .box:hover img {
+  transform: scale(1.2) rotate(5deg);
+}
+.container main .section-3 .img-container .box:hover .caption {
+  bottom: 0;
+}
+.container main .section-3 a {
+  padding: 15px 25px;
+  background-color: #00C7FC;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .container main .section-3 .img-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .container main .section-3 .img-container .box {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .container main .section-3 .shuffle li {
+    margin: 0;
+  }
+}
+.container main .section-4 {
+  margin-top: 100px;
+  position: relative;
+}
+.container main .section-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.container main .section-4 video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container main .section-4 .text {
+  color: #fff;
+  background-color: rgba(21, 99, 119, 0.7411764706);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  align-items: center;
+}
+.container main .section-4 .text p {
+  margin: 30px 0;
+}
+.container main .section-4 .text a {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #000;
+  padding: 15px 25px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+.container main .section-5 {
+  margin-top: 100px;
+}
+.container main .section-5 .img {
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.container main .section-5 .img img {
+  max-width: 100%;
+  position: relative;
+  bottom: -100px;
+}
+.container main .section-5 .stats {
+  background: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/stats.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  position: relative;
+  z-index: 21;
+}
+.container main .section-5 .stats:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.container main .section-5 .stats .stats-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 85%;
+  background-color: rgba(21, 99, 119, 0.7411764706);
+}
+.container main .section-5 .stats .stats-con .box {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  color: #fff;
+  flex-basis: 25%;
+  padding: 50px;
+}
+.container main .section-5 .stats .stats-con .box h3 {
+  margin: 20px 0;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.container main .section-5 .stats .stats-con .box i {
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.container main .section-5 .our-skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+}
+.container main .section-5 .our-skills .skills-con {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.container main .section-5 .our-skills .skills-con .testimonials,
+.container main .section-5 .our-skills .skills-con .skills {
+  flex-basis: 45%;
+}
+.container main .section-5 .our-skills .skills-con .testimonials {
+  text-align: center;
+}
+.container main .section-5 .our-skills .skills-con .testimonials h3 {
+  margin-bottom: 30px;
+}
+.container main .section-5 .our-skills .skills-con .testimonials :nth-child(2) {
+  color: #777;
+  margin-bottom: 60px;
+  line-height: 2;
+}
+.container main .section-5 .our-skills .skills-con .testimonials .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+.container main .section-5 .our-skills .skills-con .testimonials .content img {
+  border-radius: 50%;
+  width: 100px;
+}
+.container main .section-5 .our-skills .skills-con .testimonials .content .text {
+  line-height: 2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.431372549);
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+  color: #000;
+}
+.container main .section-5 .our-skills .skills-con .testimonials .content .text p {
+  text-align: right;
+  color: #777;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .container main .section-5 .our-skills .skills-con .testimonials .content {
+    flex-flow: column wrap;
+  }
+}
+.container main .section-5 .our-skills .skills-con .testimonials .bullet {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.container main .section-5 .our-skills .skills-con .testimonials .bullet li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  border: 1px solid #777;
+}
+.container main .section-5 .our-skills .skills-con .testimonials .bullet li:nth-child(2) {
+  background-color: #00C7FC;
+  border: none;
+}
+.container main .section-5 .our-skills .skills-con .skills {
+  text-align: center;
+}
+.container main .section-5 .our-skills .skills-con .skills h3 {
+  margin-bottom: 30px;
+}
+.container main .section-5 .our-skills .skills-con .skills :nth-child(2) {
+  color: #777;
+  margin-bottom: 60px;
+  line-height: 2;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder {
+  text-align: left;
+  margin-bottom: 40px;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder h4 {
+  margin-bottom: 15px;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-1,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-2,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-3,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-4 {
+  background-color: #dedadc;
+  height: 30px;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-1 span,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-2 span,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-3 span,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-4 span {
+  display: block;
+  height: 100%;
+  background-color: #00C7FC;
+  position: relative;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-1 span::before,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-2 span::before,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-3 span::before,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-4 span::before {
+  content: attr(data-progress);
+  position: absolute;
+  top: -50px;
+  width: 40px;
+  right: -18px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-1 span::after,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-2 span::after,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-3 span::after,
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-4 span::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -8px;
+  border: 8px solid #000;
+  border-color: #000 transparent transparent transparent;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-1 span {
+  width: 90%;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-2 span {
+  width: 85%;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-3 span {
+  width: 80%;
+}
+.container main .section-5 .our-skills .skills-con .skills .prog-holder .prog-4 span {
+  width: 90%;
+}
+@media (max-width: 900px) {
+  .container main .section-5 .our-skills .skills-con {
+    flex-flow: column wrap;
+  }
+  .container main .section-5 .our-skills .skills-con .testimonials,
+  .container main .section-5 .our-skills .skills-con .skills {
+    flex-basis: 100%;
+  }
+}
+.container main .section-5 .quote {
+  margin-top: 100px;
+  background: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/quote.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+  color: #fff;
+  z-index: 22;
+}
+.container main .section-5 .quote::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
+}
+.container main .section-5 .quote .quote-con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+.container main .section-5 .quote .quote-con q {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 30px;
+  line-height: 2;
+}
+.container main .section-6 {
+  margin-top: 100px;
+}
+.container main .section-6 .price {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+.container main .section-6 .price .plan {
+  background-color: rgba(238, 238, 238, 0.3294117647);
+  text-align: center;
+}
+.container main .section-6 .price .plan .head {
+  padding: 20px;
+  border-top: 2px solid #00C7FC;
+  border-bottom: 2px solid #00C7FC;
+}
+.container main .section-6 .price .plan .head h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.container main .section-6 .price .plan .head span {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.container main .section-6 .price .plan .head span::after {
+  content: "/Mo";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.5rem;
+}
+.container main .section-6 .price .plan .head span::before {
+  content: "$";
+  position: absolute;
+  top: 0;
+  left: 15px;
+  font-size: 1.8rem;
+}
+.container main .section-6 .price .plan ul {
+  margin-top: 20px;
+  border-bottom: 2px solid #00C7FC;
+  padding: 15px;
+}
+.container main .section-6 .price .plan ul li {
+  list-style: none;
+  padding: 30px 0;
+  position: relative;
+}
+.container main .section-6 .price .plan ul li:nth-child(1)::after, .container main .section-6 .price .plan ul li:nth-child(2)::after, .container main .section-6 .price .plan ul li:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #00C7FC;
+}
+.container main .section-6 .price .plan a {
+  display: block;
+  padding: 15px 25px;
+  border: 1px solid #00C7FC;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  color: #777;
+  transition: all 0.3s;
+}
+.container main .section-6 .price .plan a:hover {
+  background-color: #00C7FC;
+  color: #fff;
+}
+.container main .section-6 .contact {
+  margin-top: 50px;
+  text-align: center;
+}
+.container main .section-6 .contact p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.container main .section-6 .contact a {
+  display: block;
+  padding: 15px 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  background-color: #00C7FC;
+  color: #fff;
+  transition: all 0.3s;
+}
+.container main .section-6 .contact a:hover {
+  border-radius: 20px;
+  transform: scale(1.2);
+}
+.container main .section-6 .subscribe {
+  background: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 25;
+}
+.container main .section-6 .subscribe::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.container main .section-6 .subscribe .form {
+  width: 90%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 10px;
+}
+.container main .section-6 .subscribe .form form {
+  border: 1px solid #fff;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+}
+.container main .section-6 .subscribe .form form input {
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.container main .section-6 .subscribe .form form input::-moz-placeholder {
+  color: #fff;
+}
+.container main .section-6 .subscribe .form form input::placeholder {
+  color: #fff;
+}
+.container main .section-6 .subscribe .form form :nth-child(3) {
+  background-color: #00C7FC;
+  cursor: pointer;
+}
+.container main .section-6 .subscribe .form form :nth-child(3)::-moz-placeholder {
+  color: #fff;
+}
+.container main .section-6 .subscribe .form form :nth-child(3)::placeholder {
+  color: #fff;
+}
+.container main .section-6 .subscribe .form p {
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .container main .section-6 .subscribe .form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container main .section-6 .subscribe .form form {
+    flex-wrap: wrap;
+    padding: 20px 0;
+    align-self: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .container main .section-6 .subscribe .form form input {
+    padding: 15px;
+  }
+}
+.container main .section-7 {
+  margin-top: 100px;
+}
+.container main .section-7 .contnet {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+}
+.container main .section-7 .contnet form {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 75%;
+  position: relative;
+}
+.container main .section-7 .contnet form input,
+.container main .section-7 .contnet form textarea {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: block;
+  border: 1px solid #00C7FC;
+  font-size: 1.2rem;
+}
+.container main .section-7 .contnet form :nth-child(3) {
+  height: 200px;
+}
+.container main .section-7 .contnet form a {
+  display: block;
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  bottom: 0;
+  right: 0;
+  transform: translateY(50px);
+  text-decoration: none;
+  background-color: #00C7FC;
+  color: #fff;
+  padding: 20px 25px;
+}
+.container main .section-7 .contnet .info h4 {
+  margin-bottom: 15px;
+}
+.container main .section-7 .contnet .info h4:nth-of-type(2) {
+  margin-top: 80px;
+}
+.container main .section-7 .contnet .info span {
+  display: block;
+  padding: 10px 0;
+}
+@media (max-width: 768px) {
+  .container main .section-7 .contnet {
+    flex-flow: column-reverse wrap;
+  }
+  .container main .section-7 .contnet .info {
+    text-align: center;
+  }
+}
+
+.container footer {
+  background: url(https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  z-index: 30;
+}
+.container footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.container footer .info {
+  color: #fff;
+  width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.container footer .info img {
+  display: block;
+  margin-bottom: 50px;
+}
+.container footer .info h3 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+.container footer .info .social a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.container footer .info p {
+  margin-top: 60px;
+}
+.container footer .info p span {
+  color: #00C7FC;
+  font-weight: 900;
+}
+@media (max-width: 768px) {
+  .container footer {
+    padding: 30px;
+  }
+}/*# sourceMappingURL=main.css.map */
